@@ -1,0 +1,34 @@
+div.jumbotron {
+	margin: 0 auto;
+	border-radius: 5px;
+	padding: 20px;
+	overflow: hidden;
+}
+
+div.jumbotron h3 {
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+span.btn-container {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: right;
+}
+
+div.jumbotron table {
+	box-shadow: 0 0 10px #000000;
+}
+
+tbody tr:hover {
+	background-color: #C8F5F7 !important;
+}
+
+tbody tr.selected {
+	background-color: #E8F7C8 !important; 
+}
+
+div span.glyphicon {
+	margin-right: 5px;
+}

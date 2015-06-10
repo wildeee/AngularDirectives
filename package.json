@@ -1,0 +1,29 @@
+{
+  "name": "FirstExpressApp",
+  "version": "1.0.0",
+  "description": "This is my first application using express",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wildeee/FirstExpressApp.git"
+  },
+  "keywords": [
+    "hello",
+    "express",
+    "node"
+  ],
+  "author": "Wilde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wildeee/FirstExpressApp/issues"
+  },
+  "homepage": "https://github.com/wildeee/FirstExpressApp",
+  "dependencies": {
+    "angular": "^1.4.0",
+    "bootstrap": "^3.3.4",
+    "express": "^4.12.3"
+  }
+}

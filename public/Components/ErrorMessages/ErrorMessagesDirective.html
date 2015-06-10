@@ -1,0 +1,10 @@
+<div class="ui-error" ng-show="errorList.length > 0">
+	<span class="glyphicon glyphicon-remove btn-close" ng-click="closeErrorWindow()"></span>
+	<p class="ui-error-title" ng-show="errorList.length === 1">Ops, aconteceu um problema:</p>
+	<p class="ui-error-title" ng-show="errorList.length > 1">Ops, aconteceram alguns problemas:</p>
+	<ul ng-repeat="error in errorList">
+		<li>
+			{{error}}
+		</li>
+	</ul>
+</div>

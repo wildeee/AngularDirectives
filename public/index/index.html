@@ -1,0 +1,52 @@
+<html ng-app="contatos">
+<head>
+	<title>Express Hello</title>
+	<meta charset="utf-8"/>
+	<script type="text/javascript" src="Angular/angular.js"></script>
+	<link rel="stylesheet" type="text/css" href="Bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="CommonCss/common_style.css">
+	<link rel="stylesheet" type="text/css" href="Index/indexStyle.css">
+	<script type="text/javascript" src="Index/indexController.js"></script>
+	<script type="text/javascript" src="Components/ErrorMessages/ErrorMessagesDirective.js"></script>	
+	<link rel="stylesheet" type="text/css" href="Components/ErrorMessages/ErrorMessagesDirective.css">
+	<script type="text/javascript" src="Components/Masks/Telefone/TelefoneMaskDirective.js"></script>
+</head>
+<body ng-controller="indexController">
+	<ui-error error-list="errorList"></ui-error>
+	<div class="content">
+		<div class="jumbotron">
+			<h3>Meus contatos</h3>
+			<hr/>
+			<span class="btn-container">
+				<div class="btn btn-primary" ng-click="openForm(visibleForm)"><span class="glyphicon glyphicon-plus"></span>Novo</div>
+				
+				<div class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Remover</div>
+				
+			</span>		
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th><input type="checkbox" ng-model="masterCheckbox" ng-click="masterClick(masterCheckbox)"/></th>
+							<th>Id</th>
+							<th>Nome</th>
+							<th>Telefone</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="contato in contatos" ng-click="contato.checked = !contato.checked" ng-class="{'selected': contato.checked}">
+							<td><input type="checkbox" ng-model="contato.checked" ng-click="$event.stopPropagation();"/></td>
+							<td>{{contato.id}}</td>
+							<td>{{contato.nome}}</td>
+							<td>{{contato.telefone}}</td>
+						</tr>
+					</tbody>
+				</table>
+			<form ng-show="visibleForm">
+				<input type="text" class="form-control" placeholder="Nome" ng-model="contato.nome" name="nome"/>
+				<input type="text" class="form-control" placeholder="Telefone" ng-model="contato.telefone" name="telefone" ui-telefone/>
+				<input type="button" class="btn btn-primary btn-block" value="Salvar" ng-click="addContato(contato)"/>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
