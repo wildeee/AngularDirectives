@@ -10,7 +10,5 @@ angular.module('contatos').directive('uiError', function(){
 				scope.errorList = [];
 			};
 		}
-
-
 	};
 });

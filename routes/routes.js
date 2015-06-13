@@ -17,11 +17,11 @@ var contatos = [
 	{
 		id: 1
 		,nome: 'Wilde'
-		,telefone: '554499606007'
+		,telefone: '554499609999'
 	},
 	{
 		id: 2
 		,nome: 'Rossi'
-		,telefone: '554499735011'
+		,telefone: '554499739998'
 	}
 ];

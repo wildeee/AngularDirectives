@@ -26,7 +26,7 @@ angular.module('contatos').controller('indexController', function($scope, $http)
 		});
 	};
 
-	$scope.errorList = [];
+	$scope.errorList = ['Teste mensagem de erro criada por diretiva 1', 'Teste 2 mensagem de erro criada por diretiva'];
 });
 
 

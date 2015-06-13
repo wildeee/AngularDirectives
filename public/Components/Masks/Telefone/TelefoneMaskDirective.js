@@ -32,6 +32,14 @@ angular.module('contatos').directive('uiTelefone', function(){
 				ctrl.$setViewValue(_format(ctrl.$viewValue));
 				ctrl.$render();
 			});
+
+			element.on('blur', function(){
+				var _fone = _numbersOnly(ctrl.$viewValue);
+				if (_fone.length < 12 || _fone.length > 13) {
+					ctrl.$setViewValue('');
+					ctrl.$render();
+				}
+			});
 		}
 	};
 });
